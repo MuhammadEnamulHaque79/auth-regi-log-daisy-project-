@@ -13,6 +13,7 @@ const auth = getAuth(app);
 
 const AuthProviders = ({ children }) => {
   const [user, setUser] = useState(null);
+  const[loading,setLoading] = useState(true);
 
   // const user = {displayName:'Muhammad Enamul Haque'};
 
@@ -35,6 +36,7 @@ const AuthProviders = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log("on auth state change", currentUser);
       setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unsubscribe();
@@ -43,6 +45,7 @@ const AuthProviders = ({ children }) => {
 
   const authInfo = {
     user,
+    loading,
     createUser,
     signIn,
     logOut

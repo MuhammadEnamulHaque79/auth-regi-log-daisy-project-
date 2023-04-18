@@ -39,13 +39,9 @@ const Header = () => {
         <div className="nav-right-part">
           <Link className="btn btn-ghost normal-case text-xl" to="/">Home</Link>{""}
           <Link className="btn btn-ghost normal-case text-xl" to="/orders">Orders</Link>{""}
-          <Link className="btn btn-ghost normal-case text-xl" to="/login">
-            Login
-          </Link>
-          {""}
-          <Link className="btn btn-ghost normal-case text-xl" to="/register">
-            Register
-          </Link>
+        {user && <Link className="btn btn-ghost normal-case text-xl" to="/profile">Profile</Link>}{""}
+          <Link className="btn btn-ghost normal-case text-xl" to="/login">Login</Link>{""}
+          <Link className="btn btn-ghost normal-case text-xl" to="/register">Register</Link>
         </div>
 
       </div>
