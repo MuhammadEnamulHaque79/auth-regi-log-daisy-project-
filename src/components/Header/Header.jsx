@@ -10,8 +10,8 @@ const Header = () => {
     .then(()=>{
 
     })
-    .catch(()=>{
-
+    .catch((error)=>{
+      console.error(error);
     })
   }
 
@@ -37,10 +37,8 @@ const Header = () => {
         </div>
 
         <div className="nav-right-part">
-          <Link className="btn btn-ghost normal-case text-xl" to="/">
-            Home
-          </Link>
-          {""}
+          <Link className="btn btn-ghost normal-case text-xl" to="/">Home</Link>{""}
+          <Link className="btn btn-ghost normal-case text-xl" to="/orders">Orders</Link>{""}
           <Link className="btn btn-ghost normal-case text-xl" to="/login">
             Login
           </Link>
