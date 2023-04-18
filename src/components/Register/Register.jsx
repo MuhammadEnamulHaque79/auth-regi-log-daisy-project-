@@ -74,7 +74,7 @@ const handleRegister=(event)=>{
                 required
               />
               <label className="label">
-                <Link to="/login" className="label-text-alt link link-hover">
+                <Link to="/login" className="label-text-alt link link-hover font-bold">
                   Already have an account? Please Login
                 </Link>
               </label>

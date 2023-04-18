@@ -4,7 +4,16 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user,logOut } = useContext(AuthContext);
+  const handleLogOut=()=>{
+    logOut()
+    .then(()=>{
+
+    })
+    .catch(()=>{
+
+    })
+  }
 
   return (
     <>
@@ -15,9 +24,14 @@ const Header = () => {
         </Link>
         <div className="user-info">
           {user ? (
-            <span>{user.email}</span>
+            <>
+              {user.email}
+           
+              <button onClick={handleLogOut} className="btn btn-warning btn-xs text-white ml-5">sign out</button>
+            </>
           ) : (
-            <button className="btn btn-xs">sign out</button>
+           
+            <Link className="btn btn-success text-white" to="/login">Login</Link>
           )}
         </div>
         </div>

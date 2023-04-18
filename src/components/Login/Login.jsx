@@ -60,7 +60,7 @@ const Login = () => {
                 required
               />
               <label className="label">
-                <Link to="/register" className="label-text-alt link link-hover">
+                <Link to="/register" className="label-text-alt link link-hover font-bold">
                   New to Dream Hub? Please Register
                 </Link>
               </label>
